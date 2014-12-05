@@ -1,0 +1,4 @@
+services:
+#    covertechdesign_user.example:
+#        class: Covertechdesign\UserBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Covertechdesign\AdminBundle\Entity\CategoriasTags" table="categorias_tags">
+    <indexes>
+      <index name="fk_categorias_tags_idcategoria" columns="idcategoria"/>
+    </indexes>
+    <id name="idcategoriaTag" association-key="true"/>
+    <field name="idtag" type="integer" column="idtag" nullable="true"/>
+    <one-to-one field="idcategoriaTag" target-entity="Tags">
+      <join-columns>
+        <join-column name="idcategoria_tag" referenced-column-name="idtag"/>
+      </join-columns>
+    </one-to-one>
+    <many-to-one field="idcategoria" target-entity="Categorias">
+      <join-columns>
+        <join-column name="idcategoria" referenced-column-name="idcategoria"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

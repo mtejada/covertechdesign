@@ -1,0 +1,30 @@
+<div class="panel panel-yellow">
+    <div class="panel panel-heading">
+        <h3 class="panel-title">Materiales</h3>
+    </div>
+    <div class="panel panel-body">
+        <div class="table-responsive">
+            {% if materiales|length >0 %}
+                <table class="table table-bordered table-hover table-striped">
+
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for material in materiales %}
+                            <tr>
+                                <td>{{material.nombre}}</td>
+                                <td>ver tags</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                <div class="alert alert-info" role="alert">No se encontraron materiales</div>
+            {% endif %}
+        </div>
+    </div>
+</div>

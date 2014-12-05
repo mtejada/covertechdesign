@@ -1,0 +1,7 @@
+covertechdesign_admin_homepage:
+    path:     /
+    defaults: { _controller: CovertechdesignAdminBundle:Default:index }
+
+covertechdesign_abms:
+    resource: "@CovertechdesignAdminBundle/Resources/config/abms.yml"
+    prefix:   /abms

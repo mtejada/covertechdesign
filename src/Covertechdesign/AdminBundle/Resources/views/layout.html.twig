@@ -1,0 +1,258 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/bmatznerjqueryui/css/smoothness/jquery-ui.css') }}" filter='cssrewrite' />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/bmatznerjqueryui/css/smoothness/jquery.ui.theme.css') }}" />
+    <!-- Bootstrap -->
+    <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" media="screen">
+    {% stylesheets '@CovertechdesignAdminBundle/Resources/public/css/*' %}
+    <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
+    {% endstylesheets %}
+
+    <!--<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">-->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html" style="margin:0px;padding: 0px;"><img  src="{{ asset('ctd.png') }}" style="padding-top:5px;padding-left:50px;" /></a>
+            </div>
+            <div style="float:left;padding-left:46em;padding-top:7px;"><img  src="{{ asset('covertechdesign.png') }}" /></div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+                <!-- <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
+                     <ul class="dropdown-menu message-dropdown">
+                         <li class="message-preview">
+                             <a href="#">
+                                 <div class="media">
+                                     <span class="pull-left">
+                                         <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                     </span>
+                                     <div class="media-body">
+                                         <h5 class="media-heading"><strong>John Smith</strong>
+                                         </h5>
+                                         <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                         <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                     </div>
+                                 </div>
+                             </a>
+                         </li>
+                         <li class="message-preview">
+                             <a href="#">
+                                 <div class="media">
+                                     <span class="pull-left">
+                                         <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                     </span>
+                                     <div class="media-body">
+                                         <h5 class="media-heading"><strong>John Smith</strong>
+                                         </h5>
+                                         <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                         <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                     </div>
+                                 </div>
+                             </a>
+                         </li>
+                         <li class="message-preview">
+                             <a href="#">
+                                 <div class="media">
+                                     <span class="pull-left">
+                                         <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                     </span>
+                                     <div class="media-body">
+                                         <h5 class="media-heading"><strong>John Smith</strong>
+                                         </h5>
+                                         <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                         <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                     </div>
+                                 </div>
+                             </a>
+                         </li>
+                         <li class="message-footer">
+                             <a href="#">Read All New Messages</a>
+                         </li>
+                     </ul>
+                 </li>
+                 <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
+                     <ul class="dropdown-menu alert-dropdown">
+                         <li>
+                             <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
+                         </li>
+                         <li>
+                             <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
+                         </li>
+                         <li>
+                             <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
+                         </li>
+                         <li>
+                             <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
+                         </li>
+                         <li>
+                             <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
+                         </li>
+                         <li>
+                             <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
+                         </li>
+                         <li class="divider"></li>
+                         <li>
+                             <a href="#">View All</a>
+                         </li>
+                     </ul>
+                 </li>-->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Maximiliano Tejada <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-user"></i> Perfil</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-gear"></i> Configuracion</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Salir</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li class="active">
+                        <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Ventas</a>
+                    </li>
+                    <li>
+                        <a href="tables.html"><i class="fa fa-fw fa-table"></i> Productos</a>
+                    </li>
+                    <li>
+                        <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Clientes</a>
+                    </li>
+                    <li>
+                        <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Ingresos y Egresos</a>
+                    </li>
+                    <li>
+                        <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> ABMs Varios <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo" class="collapse">
+                            <li>
+                                <a href="#">Marcas</a>
+                            </li>
+                            <li>
+                                <a href="#">Categorias</a>
+                            </li>
+                            <li>
+                                <a href="#">Materiales</a>
+                            </li>
+                            <li>
+                                <a href="#">Modelos</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            {% block titulo %}Home <small>Muro de novedades</small>{% endblock %}
+                        </h1>
+                        <ol class="breadcrumb">
+
+                            {% block breadcrumb %}
+                                <li class="active">
+                                    <i class="fa fa-dashboard"></i> Inicio
+                                </li>
+                            {% endblock %}
+                        </ol>
+                    </div>
+                </div>
+                {% block content %}
+                {% endblock %}
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+{% endblock %}
+
+
+
+{% block javascripts %}
+    <script src="{{ asset('js/jquery.js') }}"></script>
+    <!-- Include all JavaScripts, compiled by Assetic -->
+    <script type="text/javascript" src="{{ asset('bundles/bmatznerjqueryui/js/minified/jquery-ui.min.js') }}"></script>
+
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+
+            $('.date').datepicker({
+                dateFormat: 'dd/mm/yy',
+                changeMonth: true,
+                changeYear: true,
+                showButtonPanel: true,
+            });
+        });
+    </script>
+    <script type="text/javascript" >
+        $(function($) {
+            $.datepicker.regional['es'] = {
+                closeText: 'Cerrar',
+                prevText: '<Ant',
+                nextText: 'Sig>',
+                currentText: 'Hoy',
+                monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+                dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+                dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Juv', 'Vie', 'Sáb'],
+                dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'],
+                weekHeader: 'Sm',
+                dateFormat: 'dd/mm/yy',
+                firstDay: 1,
+                isRTL: false,
+                showMonthAfterYear: false,
+                yearSuffix: ''
+            };
+            $.datepicker.setDefaults($.datepicker.regional['es']);
+
+        });
+
+        //$().confirmation('show');
+    </script>
+    <!--<script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>-->
+
+{% endblock %}

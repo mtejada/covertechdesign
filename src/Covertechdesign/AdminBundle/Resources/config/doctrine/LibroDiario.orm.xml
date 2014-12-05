@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Covertechdesign\AdminBundle\Entity\LibroDiario" table="libro_diario">
+    <indexes>
+      <index name="fk_libro_diario_idtransaccion" columns="idtransaccion"/>
+    </indexes>
+    <id name="idasiento" type="integer" column="idasiento">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="fechaTransaccion" type="datetime" column="fecha_transaccion" nullable="false"/>
+    <field name="comentarios" type="string" column="comentarios" length="200" nullable="true"/>
+    <field name="importe" type="decimal" column="importe" precision="8" scale="2" nullable="true"/>
+    <field name="activo" type="boolean" column="activo" nullable="true"/>
+    <many-to-one field="idtransaccion" target-entity="Transacciones">
+      <join-columns>
+        <join-column name="idtransaccion" referenced-column-name="idtransaccion"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

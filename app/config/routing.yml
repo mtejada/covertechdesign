@@ -1,3 +1,12 @@
-app:
-    resource: @AppBundle/Controller/
-    type:     annotation
+covertechdesign_user:
+    resource: "@CovertechdesignUserBundle/Resources/config/routing.yml"
+    prefix:   /fos
+
+covertechdesign_page:
+    resource: "@CovertechdesignPageBundle/Resources/config/routing.yml"
+    prefix:   /
+
+covertechdesign_admin:
+    resource: "@CovertechdesignAdminBundle/Resources/config/routing.yml"
+    prefix:   /admin
+

@@ -32,17 +32,14 @@ twig:
 
 # Assetic Configuration
 assetic:
-    debug:          "%kernel.debug%"
-    use_controller: false
-    bundles:        [ ]
-    #java: /usr/bin/java
     filters:
+        less:
+            node: "%nodejs%"
+            node_paths: ["%nodejs_paths%"]
+            apply_to: "\.less$"
         cssrewrite: ~
-        #closure:
-        #    jar: "%kernel.root_dir%/Resources/java/compiler.jar"
-        #yui_css:
-        #    jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar"
-
+braincrafted_bootstrap:
+    less_filter: less
 # Doctrine Configuration
 doctrine:
     dbal:
@@ -64,6 +61,23 @@ doctrine:
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping: true
 
+fos_user:
+    db_driver: orm 
+    firewall_name: main
+    user_class: Rendiciones\UserBundle\Entity\UsuariosLogin
+    service:
+        mailer: fos_user.mailer.default
+    registration:
+            form:
+                type: rendiciones_user_registration
+    group:
+        group_class: Rendiciones\UserBundle\Entity\Group
+        form:
+            type: rendiciones_user_group
+    model_manager_name: user_login
+    from_email:
+        address:        no-responder@cajadepagos.com
+        sender_name:    Administrador Rendiciones
 # Swiftmailer Configuration
 swiftmailer:
     transport: "%mailer_transport%"

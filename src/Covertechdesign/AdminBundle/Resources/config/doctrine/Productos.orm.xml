@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Covertechdesign\AdminBundle\Entity\Productos" table="productos">
+    <indexes>
+      <index name="fk_productos_idmarca" columns="idmodelo"/>
+      <index name="fk_productos_idmaterial" columns="idmaterial"/>
+      <index name="fk_productos_idcategoria" columns="idcategoria"/>
+      <index name="fk_productos_idproveedor" columns="idproveedor"/>
+    </indexes>
+    <id name="idproducto" type="integer" column="idproducto">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="nombre" type="string" column="nombre" length="50" nullable="true"/>
+    <field name="descripcion" type="string" column="descripcion" length="500" nullable="true"/>
+    <field name="comentario" type="string" column="comentario" length="200" nullable="true"/>
+    <field name="precioActual" type="decimal" column="precio_actual" precision="8" scale="2" nullable="true"/>
+    <field name="stockActual" type="integer" column="stock_actual" nullable="true"/>
+    <field name="fechaUltimaModificacion" type="datetime" column="fecha_ultima_modificacion" nullable="false"/>
+    <many-to-one field="idmodelo" target-entity="Modelos">
+      <join-columns>
+        <join-column name="idmodelo" referenced-column-name="idmodelo"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idproveedor" target-entity="Proveedores">
+      <join-columns>
+        <join-column name="idproveedor" referenced-column-name="idproveedor"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idcategoria" target-entity="Categorias">
+      <join-columns>
+        <join-column name="idcategoria" referenced-column-name="idcategoria"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idmaterial" target-entity="Materiales">
+      <join-columns>
+        <join-column name="idmaterial" referenced-column-name="idmaterial"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

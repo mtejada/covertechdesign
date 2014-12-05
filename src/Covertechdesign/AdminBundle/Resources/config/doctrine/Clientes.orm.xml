@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Covertechdesign\AdminBundle\Entity\Clientes" table="clientes">
+    <indexes>
+      <index name="fk_clientes_idprovincia" columns="idprovincia"/>
+    </indexes>
+    <id name="idcliente" type="integer" column="idcliente">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="nombre" type="string" column="nombre" length="80" nullable="true"/>
+    <field name="apellido" type="string" column="apellido" length="50" nullable="true"/>
+    <field name="dni" type="string" column="dni" length="8" nullable="true"/>
+    <field name="email" type="string" column="email" length="50" nullable="true"/>
+    <field name="telefono" type="string" column="telefono" length="20" nullable="true"/>
+    <field name="direccion" type="string" column="direccion" length="150" nullable="true"/>
+    <field name="activo" type="boolean" column="activo" nullable="true"/>
+    <many-to-one field="idprovincia" target-entity="Provincias">
+      <join-columns>
+        <join-column name="idprovincia" referenced-column-name="idprovincia"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

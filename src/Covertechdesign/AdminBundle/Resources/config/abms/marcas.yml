@@ -1,0 +1,7 @@
+abm_marcas_new:
+    path:     /new
+    defaults: { _controller: CovertechdesignAdminBundle:Marcas:new }
+
+abm_marcas_edit:
+    path:     /edit/{id}
+    defaults: { _controller: CovertechdesignAdminBundle:Marcas:edit }

@@ -1,0 +1,3 @@
+covertechdesign_page_homepage:
+    path:     /helloo/{name}
+    defaults: { _controller: CovertechdesignPageBundle:Default:index }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Covertechdesign\AdminBundle\Entity\VentasEntregas" table="ventas_entregas">
+    <indexes>
+      <index name="fk_ventas_entregas_idventa" columns="idventa"/>
+    </indexes>
+    <id name="identrega" type="integer" column="identrega">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="fechaDespacho" type="datetime" column="fecha_despacho" nullable="false"/>
+    <field name="direccion" type="string" column="direccion" length="100" nullable="true"/>
+    <field name="comentarioMl" type="string" column="comentario_ml" length="250" nullable="true"/>
+    <many-to-one field="idventa" target-entity="Ventas">
+      <join-columns>
+        <join-column name="idventa" referenced-column-name="idventa"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

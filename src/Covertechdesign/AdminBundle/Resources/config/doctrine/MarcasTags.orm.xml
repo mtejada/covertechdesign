@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Covertechdesign\AdminBundle\Entity\MarcasTags" table="marcas_tags">
+    <indexes>
+      <index name="fk_marcas_tag_idtag" columns="idtag"/>
+      <index name="fk_marcas_tag_idmarca" columns="idmarca"/>
+    </indexes>
+    <id name="idmarcaTag" type="integer" column="idmarca_tag">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <many-to-one field="idmarca" target-entity="Marcas">
+      <join-columns>
+        <join-column name="idmarca" referenced-column-name="idmarca"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idtag" target-entity="Tags">
+      <join-columns>
+        <join-column name="idtag" referenced-column-name="idtag"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

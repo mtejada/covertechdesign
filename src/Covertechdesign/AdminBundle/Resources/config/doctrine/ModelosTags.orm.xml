@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Covertechdesign\AdminBundle\Entity\ModelosTags" table="modelos_tags">
+    <indexes>
+      <index name="fk_modelos_tags_idmodelo" columns="idmodelo"/>
+      <index name="fk_modelos_tags_idtag" columns="idtag"/>
+    </indexes>
+    <id name="idmodeloTag" type="integer" column="idmodelo_tag">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <many-to-one field="idtag" target-entity="Tags">
+      <join-columns>
+        <join-column name="idtag" referenced-column-name="idtag"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idmodelo" target-entity="Modelos">
+      <join-columns>
+        <join-column name="idmodelo" referenced-column-name="idmodelo"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

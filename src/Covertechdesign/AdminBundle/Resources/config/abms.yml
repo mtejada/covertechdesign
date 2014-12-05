@@ -1,0 +1,8 @@
+abms:
+    path:     /
+    defaults: { _controller: CovertechdesignAdminBundle:Abms:index }
+
+covertechdesign_abms:
+    resource: "@CovertechdesignAdminBundle/Resources/config/abms/marcas.yml"
+    prefix:   /marcas
+    

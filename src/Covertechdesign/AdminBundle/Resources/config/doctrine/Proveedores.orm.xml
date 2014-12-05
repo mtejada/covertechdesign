@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Covertechdesign\AdminBundle\Entity\Proveedores" table="proveedores">
+    <id name="idproveedor" type="integer" column="idproveedor">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="nombre" type="string" column="nombre" length="100" nullable="true"/>
+    <field name="cuit" type="string" column="cuit" length="20" nullable="true"/>
+    <field name="contacto" type="string" column="contacto" length="50" nullable="true"/>
+    <field name="telefono" type="string" column="telefono" length="40" nullable="true"/>
+    <field name="direccion" type="string" column="direccion" length="60" nullable="true"/>
+    <field name="activo" type="boolean" column="activo" nullable="true"/>
+  </entity>
+</doctrine-mapping>

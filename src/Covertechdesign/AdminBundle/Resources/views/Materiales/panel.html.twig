@@ -1,8 +1,14 @@
 <div class="panel panel-yellow">
-    <div class="panel panel-heading">
-        <h3 class="panel-title">Materiales</h3>
+    <div class="panel panel-heading" style="margin-bottom: 0px;">
+       <h3 class="panel-title" style="float:left;">Materiales</h3><a style="cursor: pointer;float:right;" id="new_material" onclick="newMaterial();"><span class="glyphicon glyphicon-plus" style="font-size: 30px;margin-top:-10px;text-align:right;color:white;"></span></a>
+        <div style="clear: both;"></div>
     </div>
-    <div class="panel panel-body">
+    <div class="panel panel-body" style="padding-top: 0px;">
+        <script type="text/javascript">
+            function newMaterial(){
+            window.open('{{path('abm_materiales_new' )}}','newMaterial', "width=795, height=380");
+            }
+        </script>
         <div class="table-responsive">
             {% if materiales|length >0 %}
                 <table class="table table-bordered table-hover table-striped">

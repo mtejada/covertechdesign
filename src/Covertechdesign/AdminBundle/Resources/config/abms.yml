@@ -2,7 +2,17 @@ abms:
     path:     /
     defaults: { _controller: CovertechdesignAdminBundle:Abms:index }
 
-covertechdesign_abms:
+covertechdesign_abms_marcas:
     resource: "@CovertechdesignAdminBundle/Resources/config/abms/marcas.yml"
     prefix:   /marcas
+covertechdesign_abms_materiales:
+    resource: "@CovertechdesignAdminBundle/Resources/config/abms/materiales.yml"
+    prefix:   /materiales
+covertechdesign_abms_categorias:
+    resource: "@CovertechdesignAdminBundle/Resources/config/abms/categorias.yml"
+    prefix:   /categorias
+    
+covertechdesign_abms_modelos:
+    resource: "@CovertechdesignAdminBundle/Resources/config/abms/modelos.yml"
+    prefix:   /modelos
     

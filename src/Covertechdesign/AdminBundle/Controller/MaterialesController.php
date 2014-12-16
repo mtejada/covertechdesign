@@ -4,15 +4,15 @@ namespace Covertechdesign\AdminBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use Covertechdesign\AdminBundle\Form\MarcasType;
-use Covertechdesign\AdminBundle\Entity\Marcas;
+use Covertechdesign\AdminBundle\Form\MaterialesType;
+use Covertechdesign\AdminBundle\Entity\Materiales;
 
-class MarcasController extends Controller {
+class MaterialesController extends Controller {
 
     public function newAction(Request $request) {
-        $entity = new Marcas();
-        $form = $this->createForm(new MarcasType(), $entity, array(
-            'action' => $this->generateUrl('abm_marcas_new'),
+        $entity = new Materiales();
+        $form = $this->createForm(new MaterialesType(), $entity, array(
+            'action' => $this->generateUrl('abm_materiales_new'),
             'method' => 'POST',
                 // 'em' => $this->getDoctrine()->getManager(),
         ));
@@ -21,24 +21,23 @@ class MarcasController extends Controller {
         if ($form->isValid()) {
 
             $em = $this->getDoctrine()->getManager();
-            $entity->setActivo(1);
             $em->persist($entity);
             $em->flush();
 
             $this->get('session')->getFlashBag()->add(
-                    'notice', 'Nueva marca agregada: ' . $entity->getNombre()
+                    'notice', 'Nuevo material agregado: ' . $entity->getNombre()
             );
             return $this->render('CovertechdesignAdminBundle::confirm.html.twig', array(
                         'form' => $form->createView()
             ));
         }
-        return $this->render('CovertechdesignAdminBundle:Marcas:new.html.twig', array(
+        return $this->render('CovertechdesignAdminBundle:Materiales:new.html.twig', array(
                     'form' => $form->createView()
         ));
     }
 
     public function editAction($id) {
-        return $this->render('CovertechdesignAdminBundle:Marcas:edit.html.twig', array(
+        return $this->render('CovertechdesignAdminBundle:Materiales:edit.html.twig', array(
                         // ...
         ));
     }

@@ -8,14 +8,14 @@
     <id name="idmarcaTag" type="integer" column="idmarca_tag">
       <generator strategy="IDENTITY"/>
     </id>
-    <many-to-one field="idmarca" target-entity="Marcas">
-      <join-columns>
-        <join-column name="idmarca" referenced-column-name="idmarca"/>
-      </join-columns>
-    </many-to-one>
     <many-to-one field="idtag" target-entity="Tags">
       <join-columns>
         <join-column name="idtag" referenced-column-name="idtag"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idmarca" target-entity="Marcas">
+      <join-columns>
+        <join-column name="idmarca" referenced-column-name="idmarca"/>
       </join-columns>
     </many-to-one>
   </entity>

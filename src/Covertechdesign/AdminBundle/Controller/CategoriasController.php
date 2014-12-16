@@ -4,15 +4,15 @@ namespace Covertechdesign\AdminBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use Covertechdesign\AdminBundle\Form\MarcasType;
-use Covertechdesign\AdminBundle\Entity\Marcas;
+use Covertechdesign\AdminBundle\Form\CategoriasType;
+use Covertechdesign\AdminBundle\Entity\Categorias;
 
-class MarcasController extends Controller {
+class CategoriasController extends Controller {
 
     public function newAction(Request $request) {
-        $entity = new Marcas();
-        $form = $this->createForm(new MarcasType(), $entity, array(
-            'action' => $this->generateUrl('abm_marcas_new'),
+        $entity = new Categorias();
+        $form = $this->createForm(new CategoriasType(), $entity, array(
+            'action' => $this->generateUrl('abm_categorias_new'),
             'method' => 'POST',
                 // 'em' => $this->getDoctrine()->getManager(),
         ));
@@ -21,7 +21,6 @@ class MarcasController extends Controller {
         if ($form->isValid()) {
 
             $em = $this->getDoctrine()->getManager();
-            $entity->setActivo(1);
             $em->persist($entity);
             $em->flush();
 
@@ -32,13 +31,13 @@ class MarcasController extends Controller {
                         'form' => $form->createView()
             ));
         }
-        return $this->render('CovertechdesignAdminBundle:Marcas:new.html.twig', array(
+        return $this->render('CovertechdesignAdminBundle:Categorias:new.html.twig', array(
                     'form' => $form->createView()
         ));
     }
 
     public function editAction($id) {
-        return $this->render('CovertechdesignAdminBundle:Marcas:edit.html.twig', array(
+        return $this->render('CovertechdesignAdminBundle:Categorias:edit.html.twig', array(
                         // ...
         ));
     }

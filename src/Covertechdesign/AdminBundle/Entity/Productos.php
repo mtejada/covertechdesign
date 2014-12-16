@@ -45,24 +45,19 @@ class Productos
     private $idproducto;
 
     /**
-     * @var \Covertechdesign\AdminBundle\Entity\Modelos
-     */
-    private $idmodelo;
-
-    /**
      * @var \Covertechdesign\AdminBundle\Entity\Proveedores
      */
     private $idproveedor;
 
     /**
-     * @var \Covertechdesign\AdminBundle\Entity\Categorias
-     */
-    private $idcategoria;
-
-    /**
      * @var \Covertechdesign\AdminBundle\Entity\Materiales
      */
     private $idmaterial;
+
+    /**
+     * @var \Covertechdesign\AdminBundle\Entity\Categorias
+     */
+    private $idcategoria;
 
 
     /**
@@ -214,29 +209,6 @@ class Productos
     }
 
     /**
-     * Set idmodelo
-     *
-     * @param \Covertechdesign\AdminBundle\Entity\Modelos $idmodelo
-     * @return Productos
-     */
-    public function setIdmodelo(\Covertechdesign\AdminBundle\Entity\Modelos $idmodelo = null)
-    {
-        $this->idmodelo = $idmodelo;
-
-        return $this;
-    }
-
-    /**
-     * Get idmodelo
-     *
-     * @return \Covertechdesign\AdminBundle\Entity\Modelos 
-     */
-    public function getIdmodelo()
-    {
-        return $this->idmodelo;
-    }
-
-    /**
      * Set idproveedor
      *
      * @param \Covertechdesign\AdminBundle\Entity\Proveedores $idproveedor
@@ -260,29 +232,6 @@ class Productos
     }
 
     /**
-     * Set idcategoria
-     *
-     * @param \Covertechdesign\AdminBundle\Entity\Categorias $idcategoria
-     * @return Productos
-     */
-    public function setIdcategoria(\Covertechdesign\AdminBundle\Entity\Categorias $idcategoria = null)
-    {
-        $this->idcategoria = $idcategoria;
-
-        return $this;
-    }
-
-    /**
-     * Get idcategoria
-     *
-     * @return \Covertechdesign\AdminBundle\Entity\Categorias 
-     */
-    public function getIdcategoria()
-    {
-        return $this->idcategoria;
-    }
-
-    /**
      * Set idmaterial
      *
      * @param \Covertechdesign\AdminBundle\Entity\Materiales $idmaterial
@@ -303,5 +252,28 @@ class Productos
     public function getIdmaterial()
     {
         return $this->idmaterial;
+    }
+
+    /**
+     * Set idcategoria
+     *
+     * @param \Covertechdesign\AdminBundle\Entity\Categorias $idcategoria
+     * @return Productos
+     */
+    public function setIdcategoria(\Covertechdesign\AdminBundle\Entity\Categorias $idcategoria = null)
+    {
+        $this->idcategoria = $idcategoria;
+
+        return $this;
+    }
+
+    /**
+     * Get idcategoria
+     *
+     * @return \Covertechdesign\AdminBundle\Entity\Categorias 
+     */
+    public function getIdcategoria()
+    {
+        return $this->idcategoria;
     }
 }

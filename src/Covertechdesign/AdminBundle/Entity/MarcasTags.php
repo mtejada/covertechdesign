@@ -15,14 +15,14 @@ class MarcasTags
     private $idmarcaTag;
 
     /**
-     * @var \Covertechdesign\AdminBundle\Entity\Marcas
-     */
-    private $idmarca;
-
-    /**
      * @var \Covertechdesign\AdminBundle\Entity\Tags
      */
     private $idtag;
+
+    /**
+     * @var \Covertechdesign\AdminBundle\Entity\Marcas
+     */
+    private $idmarca;
 
 
     /**
@@ -33,29 +33,6 @@ class MarcasTags
     public function getIdmarcaTag()
     {
         return $this->idmarcaTag;
-    }
-
-    /**
-     * Set idmarca
-     *
-     * @param \Covertechdesign\AdminBundle\Entity\Marcas $idmarca
-     * @return MarcasTags
-     */
-    public function setIdmarca(\Covertechdesign\AdminBundle\Entity\Marcas $idmarca = null)
-    {
-        $this->idmarca = $idmarca;
-
-        return $this;
-    }
-
-    /**
-     * Get idmarca
-     *
-     * @return \Covertechdesign\AdminBundle\Entity\Marcas 
-     */
-    public function getIdmarca()
-    {
-        return $this->idmarca;
     }
 
     /**
@@ -79,5 +56,28 @@ class MarcasTags
     public function getIdtag()
     {
         return $this->idtag;
+    }
+
+    /**
+     * Set idmarca
+     *
+     * @param \Covertechdesign\AdminBundle\Entity\Marcas $idmarca
+     * @return MarcasTags
+     */
+    public function setIdmarca(\Covertechdesign\AdminBundle\Entity\Marcas $idmarca = null)
+    {
+        $this->idmarca = $idmarca;
+
+        return $this;
+    }
+
+    /**
+     * Get idmarca
+     *
+     * @return \Covertechdesign\AdminBundle\Entity\Marcas 
+     */
+    public function getIdmarca()
+    {
+        return $this->idmarca;
     }
 }

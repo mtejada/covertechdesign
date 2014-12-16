@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
   <entity name="Covertechdesign\AdminBundle\Entity\Modelos" table="modelos">
+    <indexes>
+      <index name="fk_modelos_idmarca" columns="idmarca"/>
+    </indexes>
     <id name="idmodelo" type="integer" column="idmodelo">
       <generator strategy="IDENTITY"/>
     </id>
-    <field name="idmarca" type="integer" column="idmarca" nullable="true"/>
-    <field name="nombre" type="integer" column="nombre" nullable="true"/>
+    <field name="nombre" type="string" column="nombre" length="50" nullable="true"/>
     <field name="activo" type="boolean" column="activo" nullable="true"/>
+    <many-to-one field="idmarca" target-entity="Marcas">
+      <join-columns>
+        <join-column name="idmarca" referenced-column-name="idmarca"/>
+      </join-columns>
+    </many-to-one>
   </entity>
 </doctrine-mapping>

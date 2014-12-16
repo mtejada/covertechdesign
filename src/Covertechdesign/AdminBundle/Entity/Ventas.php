@@ -60,14 +60,14 @@ class Ventas
     private $idventa;
 
     /**
-     * @var \Covertechdesign\AdminBundle\Entity\FormasPago
-     */
-    private $idfomaPago;
-
-    /**
      * @var \Covertechdesign\AdminBundle\Entity\Productos
      */
     private $idproducto;
+
+    /**
+     * @var \Covertechdesign\AdminBundle\Entity\FormasPago
+     */
+    private $idfomaPago;
 
     /**
      * @var \Covertechdesign\AdminBundle\Entity\Clientes
@@ -293,29 +293,6 @@ class Ventas
     }
 
     /**
-     * Set idfomaPago
-     *
-     * @param \Covertechdesign\AdminBundle\Entity\FormasPago $idfomaPago
-     * @return Ventas
-     */
-    public function setIdfomaPago(\Covertechdesign\AdminBundle\Entity\FormasPago $idfomaPago = null)
-    {
-        $this->idfomaPago = $idfomaPago;
-
-        return $this;
-    }
-
-    /**
-     * Get idfomaPago
-     *
-     * @return \Covertechdesign\AdminBundle\Entity\FormasPago 
-     */
-    public function getIdfomaPago()
-    {
-        return $this->idfomaPago;
-    }
-
-    /**
      * Set idproducto
      *
      * @param \Covertechdesign\AdminBundle\Entity\Productos $idproducto
@@ -336,6 +313,29 @@ class Ventas
     public function getIdproducto()
     {
         return $this->idproducto;
+    }
+
+    /**
+     * Set idfomaPago
+     *
+     * @param \Covertechdesign\AdminBundle\Entity\FormasPago $idfomaPago
+     * @return Ventas
+     */
+    public function setIdfomaPago(\Covertechdesign\AdminBundle\Entity\FormasPago $idfomaPago = null)
+    {
+        $this->idfomaPago = $idfomaPago;
+
+        return $this;
+    }
+
+    /**
+     * Get idfomaPago
+     *
+     * @return \Covertechdesign\AdminBundle\Entity\FormasPago 
+     */
+    public function getIdfomaPago()
+    {
+        return $this->idfomaPago;
     }
 
     /**

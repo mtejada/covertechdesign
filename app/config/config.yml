@@ -61,23 +61,7 @@ doctrine:
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping: true
 
-fos_user:
-    db_driver: orm 
-    firewall_name: main
-    user_class: Rendiciones\UserBundle\Entity\UsuariosLogin
-    service:
-        mailer: fos_user.mailer.default
-    registration:
-            form:
-                type: rendiciones_user_registration
-    group:
-        group_class: Rendiciones\UserBundle\Entity\Group
-        form:
-            type: rendiciones_user_group
-    model_manager_name: user_login
-    from_email:
-        address:        no-responder@cajadepagos.com
-        sender_name:    Administrador Rendiciones
+
 # Swiftmailer Configuration
 swiftmailer:
     transport: "%mailer_transport%"

@@ -1,0 +1,41 @@
+{% extends 'CovertechdesignAdminBundle::layout.html.twig' %}
+
+{% block body %}
+
+    <div id="wrapper" style="padding-left:0px;">
+
+        <!-- Navigation -->
+       
+
+        <div id="page-wrapper" style="margin-top: -3em;">
+
+            <div class="container-fluid">
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            {% block titulo %}ABMs <small>agregar nueva marca</small>{% endblock %}
+                        </h1>
+                        <ol class="breadcrumb">
+
+                            {% block breadcrumb %}
+                                <li class="active">
+                                    <i class="fa fa-dashboard"></i> Inicio
+                                </li>
+                            {% endblock %}
+                        </ol>
+                    </div>
+                </div>
+                {% block content %}
+                {% endblock %}
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+{% endblock %}
+
+

@@ -1,0 +1,7 @@
+abm_categorias_new:
+    path:     /new
+    defaults: { _controller: CovertechdesignAdminBundle:Categorias:new }
+
+abm_categorias_edit:
+    path:     /edit/{id}
+    defaults: { _controller: CovertechdesignAdminBundle:Categorias:edit }

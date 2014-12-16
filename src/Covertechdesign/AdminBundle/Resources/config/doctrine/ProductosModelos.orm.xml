@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Covertechdesign\AdminBundle\Entity\ProductosModelos" table="productos_modelos">
+    <indexes>
+      <index name="fk_productos_modelos_idproducto" columns="idproducto"/>
+      <index name="fk_productos_modelos_idmodelo" columns="idmodelo"/>
+    </indexes>
+    <id name="idproductoModelo" type="integer" column="idproducto_modelo">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="fechaAlta" type="datetime" column="fecha_alta" nullable="false"/>
+    <many-to-one field="idmodelo" target-entity="Modelos">
+      <join-columns>
+        <join-column name="idmodelo" referenced-column-name="idmodelo"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idproducto" target-entity="Productos">
+      <join-columns>
+        <join-column name="idproducto" referenced-column-name="idproducto"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

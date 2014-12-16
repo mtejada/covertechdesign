@@ -15,16 +15,6 @@ class Marcas
     private $nombre;
 
     /**
-     * @var string
-     */
-    private $codigo;
-
-    /**
-     * @var string
-     */
-    private $logo;
-
-    /**
      * @var boolean
      */
     private $activo;
@@ -56,52 +46,6 @@ class Marcas
     public function getNombre()
     {
         return $this->nombre;
-    }
-
-    /**
-     * Set codigo
-     *
-     * @param string $codigo
-     * @return Marcas
-     */
-    public function setCodigo($codigo)
-    {
-        $this->codigo = $codigo;
-
-        return $this;
-    }
-
-    /**
-     * Get codigo
-     *
-     * @return string 
-     */
-    public function getCodigo()
-    {
-        return $this->codigo;
-    }
-
-    /**
-     * Set logo
-     *
-     * @param string $logo
-     * @return Marcas
-     */
-    public function setLogo($logo)
-    {
-        $this->logo = $logo;
-
-        return $this;
-    }
-
-    /**
-     * Get logo
-     *
-     * @return string 
-     */
-    public function getLogo()
-    {
-        return $this->logo;
     }
 
     /**

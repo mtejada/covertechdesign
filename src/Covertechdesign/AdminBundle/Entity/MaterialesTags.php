@@ -15,14 +15,14 @@ class MaterialesTags
     private $idmaterialTag;
 
     /**
-     * @var \Covertechdesign\AdminBundle\Entity\Materiales
-     */
-    private $idmaterial;
-
-    /**
      * @var \Covertechdesign\AdminBundle\Entity\Tags
      */
     private $idtag;
+
+    /**
+     * @var \Covertechdesign\AdminBundle\Entity\Materiales
+     */
+    private $idmaterial;
 
 
     /**
@@ -33,29 +33,6 @@ class MaterialesTags
     public function getIdmaterialTag()
     {
         return $this->idmaterialTag;
-    }
-
-    /**
-     * Set idmaterial
-     *
-     * @param \Covertechdesign\AdminBundle\Entity\Materiales $idmaterial
-     * @return MaterialesTags
-     */
-    public function setIdmaterial(\Covertechdesign\AdminBundle\Entity\Materiales $idmaterial = null)
-    {
-        $this->idmaterial = $idmaterial;
-
-        return $this;
-    }
-
-    /**
-     * Get idmaterial
-     *
-     * @return \Covertechdesign\AdminBundle\Entity\Materiales 
-     */
-    public function getIdmaterial()
-    {
-        return $this->idmaterial;
     }
 
     /**
@@ -79,5 +56,28 @@ class MaterialesTags
     public function getIdtag()
     {
         return $this->idtag;
+    }
+
+    /**
+     * Set idmaterial
+     *
+     * @param \Covertechdesign\AdminBundle\Entity\Materiales $idmaterial
+     * @return MaterialesTags
+     */
+    public function setIdmaterial(\Covertechdesign\AdminBundle\Entity\Materiales $idmaterial = null)
+    {
+        $this->idmaterial = $idmaterial;
+
+        return $this;
+    }
+
+    /**
+     * Get idmaterial
+     *
+     * @return \Covertechdesign\AdminBundle\Entity\Materiales 
+     */
+    public function getIdmaterial()
+    {
+        return $this->idmaterial;
     }
 }

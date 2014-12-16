@@ -10,12 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Modelos
 {
     /**
-     * @var integer
-     */
-    private $idmarca;
-
-    /**
-     * @var integer
+     * @var string
      */
     private $nombre;
 
@@ -29,34 +24,16 @@ class Modelos
      */
     private $idmodelo;
 
-
     /**
-     * Set idmarca
-     *
-     * @param integer $idmarca
-     * @return Modelos
+     * @var \Covertechdesign\AdminBundle\Entity\Marcas
      */
-    public function setIdmarca($idmarca)
-    {
-        $this->idmarca = $idmarca;
+    private $idmarca;
 
-        return $this;
-    }
-
-    /**
-     * Get idmarca
-     *
-     * @return integer 
-     */
-    public function getIdmarca()
-    {
-        return $this->idmarca;
-    }
 
     /**
      * Set nombre
      *
-     * @param integer $nombre
+     * @param string $nombre
      * @return Modelos
      */
     public function setNombre($nombre)
@@ -69,7 +46,7 @@ class Modelos
     /**
      * Get nombre
      *
-     * @return integer 
+     * @return string 
      */
     public function getNombre()
     {
@@ -107,5 +84,28 @@ class Modelos
     public function getIdmodelo()
     {
         return $this->idmodelo;
+    }
+
+    /**
+     * Set idmarca
+     *
+     * @param \Covertechdesign\AdminBundle\Entity\Marcas $idmarca
+     * @return Modelos
+     */
+    public function setIdmarca(\Covertechdesign\AdminBundle\Entity\Marcas $idmarca = null)
+    {
+        $this->idmarca = $idmarca;
+
+        return $this;
+    }
+
+    /**
+     * Get idmarca
+     *
+     * @return \Covertechdesign\AdminBundle\Entity\Marcas 
+     */
+    public function getIdmarca()
+    {
+        return $this->idmarca;
     }
 }

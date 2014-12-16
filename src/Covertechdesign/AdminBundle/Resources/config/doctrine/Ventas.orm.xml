@@ -18,14 +18,14 @@
     <field name="fechaAcreditacionPago" type="datetime" column="fecha_acreditacion_pago" nullable="false"/>
     <field name="entregado" type="boolean" column="entregado" nullable="true"/>
     <field name="calificacion" type="string" column="calificacion" length="20" nullable="true"/>
-    <many-to-one field="idfomaPago" target-entity="FormasPago">
-      <join-columns>
-        <join-column name="idfoma_pago" referenced-column-name="idforma_pago"/>
-      </join-columns>
-    </many-to-one>
     <many-to-one field="idproducto" target-entity="Productos">
       <join-columns>
         <join-column name="idproducto" referenced-column-name="idproducto"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idfomaPago" target-entity="FormasPago">
+      <join-columns>
+        <join-column name="idfoma_pago" referenced-column-name="idforma_pago"/>
       </join-columns>
     </many-to-one>
     <many-to-one field="idcliente" target-entity="Clientes">
